@@ -5,9 +5,7 @@ class Solution:
         total = 0
         for i in range(len(s)):
             #print(romey[s[i]])
-            if i == len(s) - 1:
-                total += romey[s[i]]
-            elif romey[s[i]] < romey[s[i+1]]:
+            if i < len(s) - 1 and romey[s[i]] < romey[s[i+1]]:
                 total -= romey[s[i]]
             else:
                 total += romey[s[i]]
