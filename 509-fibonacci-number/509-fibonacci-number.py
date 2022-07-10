@@ -1,5 +1,6 @@
 class Solution:
     def fib(self, n: int) -> int:
+        #Time : O(n), Space : O(n)
         f = []
         f.append(0)
         f.append(1)
