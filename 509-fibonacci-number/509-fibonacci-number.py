@@ -1,11 +1,13 @@
 class Solution:
     def fib(self, n: int) -> int:
-        #Time : O(n), Space : O(n)
-        f = []
-        f.append(0)
-        f.append(1)
+        f0, f1 = 0, 1
+        if n == 0: return 0
+        if n == 1: return 1
+        
         
         for i in range(2, n+1):
-            f.append(f[i-1] + f[i-2])
-        
-        return f[n]
+            fi = f0 + f1
+            f0 = f1
+            f1 = fi
+            
+        return fi
