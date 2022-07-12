@@ -6,5 +6,12 @@ class Solution:
                 hashy[i] = 1
             else:
                 return True
-      
-            
+        
+        
+        
+        
+        
+        
+        
+        
+    
