@@ -3,6 +3,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
+        #Inplace, Space : O(1)
         row, column = len(matrix), len(matrix[0]) 
         var = 1
         for r in range(row):
