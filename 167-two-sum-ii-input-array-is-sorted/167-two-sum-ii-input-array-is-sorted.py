@@ -6,3 +6,5 @@ class Solution:
             if diff in hashy:
                 return [hashy[diff], index]
             hashy[ele] = index
+        
+        
