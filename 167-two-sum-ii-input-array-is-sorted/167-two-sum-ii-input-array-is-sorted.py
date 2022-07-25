@@ -1,7 +1,7 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         #Solution 1 
-        #Space : , Time : 
+        #Space : O(1) , Time : O(n)
         l, r = 0, len(numbers) - 1
         print(l,r)
         while l < r:
