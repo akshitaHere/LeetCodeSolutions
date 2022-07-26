@@ -1,5 +1,6 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
+        #TIme : O(1), Space : 
         count = {}
         res = 0
         
