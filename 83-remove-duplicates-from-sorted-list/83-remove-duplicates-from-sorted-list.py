@@ -15,9 +15,6 @@ class Solution:
                 first.next = first.next.next
             else:
                 first = first.next
-        
-        
         return head
-        
         
         
