@@ -16,5 +16,3 @@ class Solution:
             else:
                 first = first.next
         return head
-        
-        
