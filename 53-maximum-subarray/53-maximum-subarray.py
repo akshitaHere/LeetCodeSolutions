@@ -6,9 +6,7 @@ class Solution:
         for i in nums:
             if curSum < 0:
                 curSum = 0
-                curSum += i
-            else:
-                curSum += i
+            curSum += i
             maxSum = max(maxSum, curSum)
         return maxSum
             
