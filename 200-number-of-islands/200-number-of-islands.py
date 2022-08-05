@@ -24,8 +24,6 @@ class Solution:
                         visited.add((r, c))
                         queue.append((r, c))
                         
-                    
-        
         for r in range(rows):
             for c in range(cols):
                 if grid[r][c] == "1" and (r,c) not in visited:
