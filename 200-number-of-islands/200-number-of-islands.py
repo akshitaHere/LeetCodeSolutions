@@ -30,6 +30,3 @@ class Solution:
                     bfs(r, c)
                     islands += 1
         return islands
-    
-    
-        
