@@ -4,6 +4,10 @@ class Solution:
         for index, ele in enumerate(nums):
             diff = target - ele
             if diff in hashy:
-                return [hashy[diff], index]
+                return (index, hashy[diff])
             hashy[ele] = index
+                
+                
+    
+    
         
