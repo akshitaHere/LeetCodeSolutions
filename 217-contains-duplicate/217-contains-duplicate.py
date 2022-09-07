@@ -11,6 +11,18 @@ class Solution:
         return False
         
         
+        #Solution 2
+        
+        hashy = {}
+        for index, ele in enumerate(nums):
+            if ele in hashy:
+                return True
+            hashy[ele] = index
+        
+        return False
+       
+        
+        
         
         
         
