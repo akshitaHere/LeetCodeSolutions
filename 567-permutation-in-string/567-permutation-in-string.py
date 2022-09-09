@@ -1,5 +1,6 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
+        #Time : O(26) + O(n) = O(n)
         if len(s1) > len(s2):
             return False
         countS1, countS2 = [0] * 26, [0] * 26
