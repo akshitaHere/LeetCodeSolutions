@@ -1,5 +1,6 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        #Time : O(n)
         maxBoi = 0
         l, r = 0, 1
         while r < len(prices):
