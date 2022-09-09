@@ -3,10 +3,11 @@ class Solution:
         res = defaultdict(list)
         
         for s in strs:
-            count = [0] * 26
+            count = [0] *26
             for c in s:
                 count[ord(c) - ord("a")] += 1
-            
+            #print(tuple(count))
             res[tuple(count)].append(s)
-        
+            #print(res)
         return res.values()
+            
