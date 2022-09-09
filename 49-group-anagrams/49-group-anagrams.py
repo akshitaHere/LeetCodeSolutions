@@ -1,5 +1,6 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        #Time : O(n*m)
         res = defaultdict(list)
         
         for s in strs:
