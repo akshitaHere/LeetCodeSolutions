@@ -10,4 +10,3 @@ class Solution:
             else:
                 row += 1
         return False
-        
