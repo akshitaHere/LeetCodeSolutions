@@ -1,14 +1,15 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
+        # Time : O(1), Space : O(1)
         
-        a = set(nums)
-        maxLen = 0
-        for i in a:
-            if i - 1 not in a:
+        length, maxLen = 0, 0
+        numSet = set(nums)
+        for n in numSet:
+            length = 0
+            if n - 1 not in numSet:
                 length = 1
-                while i + 1 in a:
+                while n + 1 in numSet:
                     length += 1
-                    i += 1
-                maxLen = max(maxLen, length)
-        return maxLen
-        
+                    n += 1
+            maxLen = max(length, maxLen)
+        return maxLen        
