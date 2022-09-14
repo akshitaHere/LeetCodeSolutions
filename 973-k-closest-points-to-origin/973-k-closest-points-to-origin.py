@@ -1,5 +1,6 @@
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        #Time : O(k.log n)
         res = []
         minHeap = []
         for p, q in points:
