@@ -3,8 +3,8 @@ class Solution:
         def helper(x, n):
             if x == 0: return 0
             if n == 0: return 1
-            a = helper(x * x, n //2)
-            return a * x if n%2 else a
+            res = helper(x * x, n //2)
+            return res * x if n%2 else res
         
-        res = helper(x, abs(n))
-        return 1/res if n < 0 else res
+        ans = helper(x, abs(n))
+        return 1/ans if n < 0 else ans
