@@ -1,8 +1,18 @@
 class Solution:
     def heightChecker(self, heights: List[int]) -> int:
+        #Time : O(n), Space : O(1)
+        #Counting sort
         res = 0
-        new = sorted(heights)
+        curHeight = 0
+        freq = [0] * 101
+        for h in heights:
+            freq[h] += 1
+        print(freq)
+        
         for i in range(len(heights)):
-            if new[i] != heights[i]:
+            while freq[curHeight] == 0:
+                curHeight += 1
+            if curHeight != heights[i]:
                 res += 1
+            freq[curHeight] -= 1
         return res
