@@ -1,5 +1,7 @@
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
+        #Time : O(n), Space : O(1)
+        #Dynamic programming
         cost.append(0)
         print(len(cost))
         print(cost[len(cost) - 3])
