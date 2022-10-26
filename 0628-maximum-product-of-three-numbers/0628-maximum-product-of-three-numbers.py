@@ -1,5 +1,7 @@
 class Solution:
     def maximumProduct(self, nums: List[int]) -> int:
+        #Solution 1 
+        #Time : O(N)
         a = heapq.nlargest(3, nums)
         b = heapq.nsmallest(2, nums)
         print(a, b)
