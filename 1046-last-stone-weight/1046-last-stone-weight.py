@@ -5,6 +5,6 @@ class Solution:
         
         heapq.heapify(newStones)
         print(newStones)
-        while len(newStones) > 1:
+        while len(newStones) > 1 and newStones[0] != 0:
             heapq.heappush(newStones, heapq.heappop(newStones) - heapq.heappop(newStones))
         return -newStones[0]
