@@ -1,20 +1,17 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        walker, runner = 0, 0
-        while runner < len(chars):
-		
-            chars[walker] = chars[runner]
+        l, r = 0, 0
+        while r < len(chars):
+            chars[l] = chars[r]
             count = 1
-			
-            while runner + 1 < len(chars) and chars[runner] == chars[runner+1]:
-                runner += 1
+            while r + 1 < len(chars) and chars[r] == chars[r+1]:
+                r += 1
                 count += 1
 			
             if count > 1:
                 for c in str(count):
-                    chars[walker+1] = c
-                    walker += 1
-            runner += 1
-            walker += 1
-        
-        return walker
+                    chars[l+1] = c
+                    l += 1
+            r += 1
+            l += 1
+        return l
