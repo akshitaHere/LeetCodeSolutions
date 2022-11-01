@@ -1,6 +1,6 @@
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
-        #using recurssion, time : O(m x n)
+        #using recurssion, cache = memoization
         m = len(grid)
         n = len(grid[0])
         
