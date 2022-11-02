@@ -12,7 +12,8 @@ class Solution:
         for i in range(len(heights)):
             while freq[curHeight] == 0:
                 curHeight += 1
-            if curHeight != heights[i]:
+            if heights[i] != curHeight:
                 res += 1
             freq[curHeight] -= 1
         return res
+            
