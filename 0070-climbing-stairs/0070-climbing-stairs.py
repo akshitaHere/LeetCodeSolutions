@@ -6,6 +6,3 @@ class Solution:
             one = one + two
             two = temp
         return one
-
-#n1 n2 n3   i two one
-#n1 n2  i two one n6
