@@ -1,14 +1,11 @@
 class Solution:
     def fib(self, n: int) -> int:
-        #Solution 1
+        #Solution 1 : Iterative
         #Time : O(n), Space : 1
         if n <= 1:
             return n
         
         f0, f1 = 0, 1
-        if n == 0: return 0
-        if n == 1: return 1
-        fi = 0
         for i in range(2, n + 1):
             fi = f0 + f1
             f0 = f1
@@ -16,7 +13,7 @@ class Solution:
         
         return f1
     
-        #Solution 2
+        #Solution 2 : Dp recursive
         #Time : O(n), Space : O(n)
         #f = []
         #f.append(0)
