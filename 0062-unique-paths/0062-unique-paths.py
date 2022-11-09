@@ -1,10 +1,18 @@
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        @cache
+        #Solution 1: Memoized recursive dp
+        #Time : O(m*n), Space : O(m*n)
+        #@cache
+        cache = {}
         def pathFinder(i, j):
-            if i >= m or j >= n:
+            if (i, j) in cache:
+                return cache[(i, j)]
+            elif i >= m or j >= n:
                 return 0
-            if i == m - 1 and j == n - 1:
+            elif i == m - 1 and j == n - 1:
                 return 1
-            return pathFinder(i, j + 1) + pathFinder(i + 1, j)
+            cache[(i, j)] = pathFinder(i, j + 1) + pathFinder(i + 1, j)
+            return cache[(i, j)]
         return pathFinder(0, 0)
+        
+        
