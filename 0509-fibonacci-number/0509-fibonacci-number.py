@@ -1,15 +1,31 @@
 class Solution:
     def fib(self, n: int) -> int:
-        fibonacci_cache = {}
-        
-        def fibonacci_memo(n):
-            if n in fibonacci_cache:
-                return fibonacci_cache[n]
+#        Solution 1 : Dp recursive : Time : 2^n, Space : O(n)
+#       if n <= 1:
+#           return n
+#       return self.fib(n - 1) + self.fib(n - 2)
+
+#        Solution 2 : Dp recursive with memoization : Time : O(n), Soace : O(n)
+        cache = {}
+        def fibCalc(n):
+            if n in cache:
+                return cache[n]
             elif n <= 1:
-                fibonacci_cache[n] = n
+                cache[n] = n
                 return n
             else:           
-                fibonacci_cache[n] =  fibonacci_memo(n -1) + fibonacci_memo(n -2)
-                return fibonacci_cache[n]
+                cache[n] =  fibCalc(n -1) + fibCalc(n -2)
+                return cache[n]
+        return fibCalc(n)
+    
+#        Solution 3 : Iterative
+#        Time : O(n), Space : 1
+        if n <= 1:
+            return n
         
-        return fibonacci_memo(n)
+        f0, f1 = 0, 1
+        for i in range(2, n + 1):
+            fi = f0 + f1
+            f0 = f1
+            f1 = fi
+        return f1
