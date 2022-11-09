@@ -14,5 +14,3 @@ class Solution:
             cache[(i, j)] = pathFinder(i, j + 1) + pathFinder(i + 1, j)
             return cache[(i, j)]
         return pathFinder(0, 0)
-        
-        
