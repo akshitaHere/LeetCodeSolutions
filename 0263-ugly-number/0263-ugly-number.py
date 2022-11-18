@@ -8,7 +8,4 @@ class Solution:
             n = n // 3
         while n % 5 == 0 :
             n = n // 5
-        if n == 1:
-            return True
-        else:
-            return False
+        return n == 1
