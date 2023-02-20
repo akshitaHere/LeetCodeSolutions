@@ -1,4 +1,4 @@
-class Solution:
+class Solution1:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashy = {}
         for index, ele in enumerate(nums):
